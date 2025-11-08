@@ -1,0 +1,499 @@
+/* ==================== FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000 url('/assets/space.jpg') fixed;
+    background-size: cover;
+    font-family: 'Courier Prime', monospace;
+    color: #00ff00;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Scanline effect */
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 255, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%);
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+/* ==================== PLANETS BAR ==================== */
+.planets-bar {
+    background: url('assets/planets.webp') repeat-x;
+    background-size: auto 24px;
+    width: 200%;
+    height: 24px;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+    
+}
+
+/* ==================== otro BAR ==================== */
+.chelsea-flame {
+    background: url('assets/chelsea_flame.gif') repeat-x;
+    background-size: auto 24px;
+    width: 200%;
+    height: 24px;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+    
+}
+
+@keyframes scrollPlanets {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==================== NAVIGATION ==================== */
+nav {
+    margin: 40px auto 20px;
+    max-width: 900px;
+}
+
+/* ==================== WINDOWS XP/98 STYLE ==================== */
+.window {
+    background: #c0c0c0;
+    border: 2px outset #ffffff;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 900px;
+    position: relative;
+}
+
+.window-title {
+    background: linear-gradient(to right, #0000aa, #1084d0);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000;
+    border-bottom: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.window-title::after {
+    content: "X";
+    background: linear-gradient(180deg, #e99d7e 0%, #df5941 29%, #9c200f 100%);
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 14px;
+}
+
+.content-box {
+    background: #ffffff;
+    padding: 20px;
+    color: #000000;
+    border: 2px inset #808080;
+}
+
+/* ==================== NAV CONTENT ==================== */
+.nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #cfccc2;
+    justify-content: center;
+}
+
+.nav-content a {
+    background: linear-gradient(180deg, #366ef3, #2d69f4 86%, #1a3eb4);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #003c74;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-content a:hover {
+    background: linear-gradient(180deg, #1c35b4, #2450d7 86%, #1a3eb4);
+    transform: translateY(-2px);
+}
+
+/* ==================== MAIN CONTENT ==================== */
+main {
+    padding: 0 20px 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+/* ==================== PROFILE SECTION ==================== */
+.profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #000000;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.profile-text h2 {
+    font-family: 'VT323', monospace;
+    font-size: 28px;
+    color: #0000aa;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.bio {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e7e4cf;
+    border: 2px groove #808080;
+}
+
+/* ==================== PROJECTS GRID ==================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    text-align: center;
+    padding: 15px;
+    background: #e7e4cf;
+    border: 2px outset #808080;
+}
+
+.project-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #0000aa;
+    margin: 10px 0;
+}
+
+.text-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* espacio entre texto e imagen */
+}
+
+.text-with-icon img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* ==================== NUEVA GALERÍA DE VINILOS ==================== */
+#vinyl-gallery {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: 6px;
+    overflow-x: auto;
+    gap: 15px;
+    background: #000000;
+}
+
+.vinyl {
+    perspective: 500px;
+    width: 18px;
+    transition: width 0.5s, margin-right 0.5s;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.vinyl:hover {
+    width: 148px;
+    margin-right: 25px;
+}
+
+.vinyl img {
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+    width: 180px;
+    height: 180px;
+    transform: rotateX(0deg) rotateY(25deg);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    border: 3px solid #333333;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    object-fit: cover;
+}
+
+.vinyl:hover img {
+    transform: rotateX(0deg) rotateY(10deg);
+    width: 188px;
+    height: 188px;
+    margin-top: -2px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.title {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    padding-left: 6px;
+    color: #00ff00;
+    font-size: 12px;
+    text-shadow: 0 0 5px #00ff00;
+    z-index: 10;
+}
+
+.vinyl:nth-child(n):hover + .title {
+    visibility: visible;
+}
+
+
+
+/* ==================== STAMPS SECTION ==================== */
+.stamps-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #000000;
+    border: 3px dashed #00ff00;
+}
+
+.stamps-section h3 {
+    color: #00ff00;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.stamps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamps-grid img {
+    /*border: 2px solid #00ff00;*/
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.contact-btn {
+    background: linear-gradient(180deg, #5eac56, #3c873c);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px outset #ffffff;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contact-btn:hover {
+    background: linear-gradient(180deg, #3c873c, #5eac56);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    margin: 40px auto 20px;
+    max-width: 900px;
+}
+
+.footer-content {
+    padding: 20px;
+    text-align: center;
+    background: #cfccc2;
+}
+
+.footer-content p {
+    color: #000000;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.footer-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-images img {
+    border: 1px solid #000000;
+}
+
+/* ==================== FLOATING DECORATIONS ==================== */
+.floating-img {
+    position: fixed;
+    pointer-events: none;
+    z-index: 50;
+    filter: brightness(0.8);
+}
+
+.floating-1 {
+    top: 150px;
+    right: 50px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-2 {
+    bottom: 100px;
+    left: 50px;
+    animation: float 5s ease-in-out infinite 1s;
+}
+
+/* ==================== SCROLLBAR STYLING ==================== */
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dcdedf;
+    border: 2px groove #808080;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bec7c9;
+    border: 2px outset #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b5bdbf;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #vinyl-gallery {
+        height: 200px;
+        gap: 10px;
+    }
+    
+    .vinyl {
+        margin-right: 15px;
+    }
+    
+    .vinyl:hover {
+        margin-right: 18px;
+    }
+    
+    .vinyl img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .vinyl:hover img {
+        width: 158px;
+        height: 158px;
+    }
+
+    .floating-img {
+        display: none;
+    }
+
+    .window {
+        margin: 10px;
+    }
+}
