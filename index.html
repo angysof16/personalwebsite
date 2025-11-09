@@ -1,212 +1,321 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>angysof16</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <div class="planets-bar"></div>
 
     <!-- Nav -->
     <nav class="window">
-        <div class="window-title">NOT SO PROFESSIONAL PORTFOLIO :3</div>
-        <div class="nav-content">
-            <a href="#about">about me</a>
-            <a href="#projects">projects</a>
-            <a href="#music">music</a>
-            <a href="#gallery">gallery</a>
-            <a href="#contact">contact</a>
-        </div>
+      <div class="window-title">NOT SO PROFESSIONAL PORTFOLIO :3</div>
+      <div class="nav-content">
+        <a href="#about">about me</a>
+        <a href="#projects">projects</a>
+        <a href="#music">music</a>
+        <a href="#contact">contact</a>
+      </div>
     </nav>
 
     <!-- Main -->
     <main>
-        <!-- About -->
-        <section id="about" class="window">
-            <div class="window-title">ABOUT ME</div>
-            <div class="content-box">
-                <div class="profile-container">
-                    <img src="assets/viktor.jpg" alt="profile pic"
-                        class="profile-pic">
-                    <div class="profile-text">
-                        <h2>angysof16</h2>
-                        <h3>Sofia</h3>
-                        <p>Age: 20</p>
-                        <p>Location: Bogotá, colombia</p>
-                        <p>Interests: robotics, coding, music</p>
-                        <p class="bio">systems engineering student :p</p>
-                    </div>
-                </div>
+      <!-- About -->
+      <section id="about" class="window">
+        <div class="window-title">ABOUT ME</div>
+        <div class="content-box">
+          <div class="profile-container">
+            <img
+              src="assets/viktor.jpg"
+              alt="profile pic"
+              class="profile-pic"
+            />
+            <div class="profile-text">
+              <h2>angysof16</h2>
+              <h3>Sofia</h3>
+              <p>Age: 20</p>
+              <p>Location: Bogotá, colombia</p>
+              <p>Interests: robotics, coding, music</p>
+              <p class="bio">systems engineering student :p</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Projects -->
-        <section id="projects" class="window">
-            <div class="window-title">PROJECTS</div>
-            <div class="content-box">
-                <div class="project-grid">
-                    <div class="project-item">
-                        <img src="assets/image.png" alt="project 1">
-                        <h3>personal portfolio (the real one)</h3>
-                        <div class="text-with-icon">
-                            <p>personal website built with React that shows my projects, skills, and experience
-                                <img src="assets/smile.png" alt="emoji"></p>
-                        </div>
-                    </div>
-                    <div class="project-item">
-                        <img src="assets/baxter.jpg" alt="project 2">
-                        <h3>baxter implementation</h3>
-                        <p>recreated Rethink Robotics' Baxter's meshes and added moveit</p>
-                    </div>
-                    <div class="project-item">
-                        <img src="assets/arduino.png" alt="project 3">
-                        <h3>arduino security system</h3>
-                        <p>personal drawer security system built with Arduino using sensors, LCD, and servo for secure access control</p>
-                    </div>
-                </div>
+      <!-- Projects -->
+      <section id="projects" class="window">
+        <div class="window-title">PROJECTS</div>
+        <div class="content-box">
+          <div class="project-grid">
+            <div class="project-item">
+              <img src="assets/image.png" alt="project 1" />
+              <h3>personal portfolio (the real one)</h3>
+              <div class="text-with-icon">
+                <p>
+                  personal website built with React that shows my projects,
+                  skills, and experience
+                  <img src="assets/smile.png" alt="emoji" />
+                </p>
+              </div>
             </div>
-        </section>
-
-        <!-- Music -->
-        <section id="music" class="window">
-            <div class="window-title">MUSIC & MISC</div>
-            <div class="content-box">
-                <div id="vinyl-gallery">
-                    <div class="vinyl">
-                        <img src="assets/covers/fantasticplanet.jpg" alt="Fantastic Planet">
-                    </div>
-                    <div class="title">Failure - Fantastic Planet</div>
-                    
-                    <div class="vinyl">
-                        <img src="assets/covers/ten.jpg" alt="Ten">
-                    </div>
-                    <div class="title">Pearl Jam - Ten</div>
-                    
-                    <div class="vinyl">
-                        <img src="assets/covers/jarofflies.jpg" alt="Jar of Flies">
-                    </div>
-                    <div class="title">Alice in Chains - Jar of Flies</div>
-                    
-                    <div class="vinyl">
-                        <img src="assets/covers/myownprison.jpg" alt="My Own Prison">
-                    </div>
-                    <div class="title">Creed - My Own Prison</div>
-                    
-                    <div class="vinyl">
-                        <img src="assets/covers/breakthecycle.jpg" alt="Break the Cycle">
-                    </div>
-                    <div class="title">Staind - Break the Cycle</div>
-                    
-                    <div class="vinyl">
-                        <img src="assets/covers/superunknown.jpg" alt="Superunknown">
-                    </div>
-                    <div class="title">Soundgarden - Superunknown</div>
-                </div>
-
-                <!-- BLINKIES -->
-                <div class="stamps-section">
-                    <div class="stamps-grid">
-                        <img src="assets/blinkies/bassguitarist.gif" alt="blinkie">
-                        <img src="assets/blinkies/aliceinchains.gif" alt="blinkie">
-                        <img src="assets/blinkies/0210-werewolfmoonhowl.gif" width="150" alt="blinkie">
-                        <img src="assets/blinkies/0092-computerconnect.gif" alt="blinkie">
-                        <img src="assets/blinkies/apollo.gif" alt="blinkie">
-                        <img src="assets/blinkies/htmlblinkie.gif" alt="blinkie">
-                        <img src="assets/blinkies/0028-computer.gif" alt="blinkie">
-                        <img src="assets/blinkies/primus.gif" alt="blinkie">
-                        <img src="assets/blinkies/cblinkie.gif" alt="blinkie">
-                        <img src="assets/blinkies/rocketplanes.gif" alt="blinkie">
-                        <img src="assets/blinkies/scienceiscool.gif" alt="blinkie">
-                        <img src="assets/blinkies/digjazz.gif" alt="blinkie">
-                        <img src="assets/blinkies/jediknight.gif" alt="blinkie">
-                        <img src="assets/blinkies/pluto.gif" alt="blinkie">
-                        <img src="assets/blinkies/ocaptain.gif" alt="blinkie">
-                        <img src="assets/buttons/nasabutton.png" alt="button">
-                        <img src="assets/buttons/linuxnow.jpg" alt="button">
-                        <img src="assets/buttons/263gggk.gif" alt="button">
-                        <img src="assets/buttons/bestview.gif" alt="button">
-                        <img src="assets/buttons/cpp.png" alt="button">
-                        <img src="assets/buttons/hatemac.jpg" alt="button">
-                        <img src="assets/buttons/internet_now02.gif" alt="button">
-                        <img src="assets/buttons/mtv.png" alt="button">
-                        <img src="assets/buttons/radioshack.png" alt="button">
-                        <img src="assets/buttons/stackoverflow.png" alt="button">
-                        <img src="assets/buttons/tumblr_inline_p0bn6sbzDa1ty2vf6_500.gif" alt="button">
-                        <img src="assets/buttons/tumblr_inline_p3vf6gq4o61rv0j40_500.jpg" alt="button">
-                        <img src="assets/buttons/walkman.png" alt="button">
-                        <img src="assets/buttons/wwwbutton.gif" alt="button">
-                        <img src="assets/buttons/colombia.gif" alt="button">
-                    </div>
-
-                </div>
+            <div class="project-item">
+              <img src="assets/baxter.jpg" alt="project 2" />
+              <h3>baxter implementation</h3>
+              <p>
+                recreated Rethink Robotics' Baxter's meshes and added moveit
+              </p>
             </div>
-        </section>
-
-
-        <!-- Contact -->
-        <section id="contact" class="window">
-            <div class="window-title">CONTACT</div>
-            <div class="content-box">
-                <div class="contact-grid">
-                    <a href="https://angysof16.github.io/portfolio-app/" target="_blank" class="contact-btn">portfolio</a>
-                    <a href="https://github.com/angysof16" target="_blank" class="contact-btn">github</a>
-                    <a href="https://instagram.com/angysof16" target="_blank" class="contact-btn">instagram</a>
-                    <a href="https://discord.com/users/698591424605847634" target="_blank" class="contact-btn">discord</a>
-                    <a href="https://linkedin.com/in/angysof16" target="_blank" class="contact-btn">linkedin</a>
-                </div>
+            <div class="project-item">
+              <img src="assets/arduino.png" alt="project 3" />
+              <h3>arduino security system</h3>
+              <p>
+                personal drawer security system built with Arduino using
+                sensors, LCD, and servo for secure access control
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Music -->
+      <section id="music" class="window">
+        <div class="window-title">MUSIC & MISC</div>
+        <div class="content-box">
+          <div id="vinyl-gallery">
+            <div class="vinyl">
+              <img
+                src="assets/covers/threeimaginaryboys.webp"
+                alt="Fantastic Planet"
+              />
+            </div>
+            <div class="title">Three Imaginary Boys - The Cure</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/myownprison.jpg" alt="My Own Prison" />
+            </div>
+            <div class="title">Creed - My Own Prison</div>
+
+            <div class="vinyl">
+              <img
+                src="assets/covers/breakthecycle.jpg"
+                alt="Break the Cycle"
+              />
+            </div>
+            <div class="title">Staind - Break the Cycle</div>
+
+            <div class="vinyl">
+              <img
+                src="assets/covers/superunknown.jpg"
+                alt="Fantastic Planet"
+              />
+            </div>
+            <div class="title">Superunknown - Soundgarden</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/above.jpeg" alt="Fantastic Planet" />
+            </div>
+            <div class="title">Above - Mad Season</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/bullets.webp" alt="Fantastic Planet" />
+            </div>
+            <div class="title">
+              I Brought You My Bullets, You Brought Me Your Love - My Chemical
+              Romance
+            </div>
+
+            <div class="vinyl">
+              <img
+                src="assets/covers/breakfastinamerica.webp"
+                alt="Fantastic Planet"
+              />
+            </div>
+            <div class="title">Breakfast in America - Supertramp</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/1984.jpg" alt="Superunknown" />
+            </div>
+            <div class="title">1984 - Van Halen</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/jarofflies.jpg" alt="Superunknown" />
+            </div>
+            <div class="title">Jar of Flies - Alice in Chains</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/tailwinds.webp" alt="Superunknown" />
+            </div>
+            <div class="title">Tailwinds - The Fearless Flyers</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/ten.jpg" alt="Superunknown" />
+            </div>
+            <div class="title">Ten - Pearl Jam</div>
+
+            <div class="vinyl">
+              <img src="assets/covers/fantasticplanet.jpg" alt="Superunknown" />
+            </div>
+            <div class="title">Failure - Fantastic Planet</div>
+          </div>
+
+          <!-- BLINKIES -->
+          <div class="stamps-section">
+            <div class="stamps-grid">
+              <img src="assets/blinkies/bassguitarist.gif" alt="blinkie" />
+              <img src="assets/blinkies/aliceinchains.gif" alt="blinkie" />
+              <img
+                src="assets/blinkies/0210-werewolfmoonhowl.gif"
+                width="150"
+                alt="blinkie"
+              />
+              <img
+                src="assets/blinkies/0092-computerconnect.gif"
+                alt="blinkie"
+              />
+              <img src="assets/blinkies/apollo.gif" alt="blinkie" />
+              <img src="assets/blinkies/htmlblinkie.gif" alt="blinkie" />
+              <img src="assets/blinkies/0028-computer.gif" alt="blinkie" />
+              <img src="assets/blinkies/primus.gif" alt="blinkie" />
+              <img src="assets/blinkies/cblinkie.gif" alt="blinkie" />
+              <img src="assets/blinkies/rocketplanes.gif" alt="blinkie" />
+              <img src="assets/blinkies/scienceiscool.gif" alt="blinkie" />
+              <img src="assets/blinkies/digjazz.gif" alt="blinkie" />
+              <img src="assets/blinkies/jediknight.gif" alt="blinkie" />
+              <img src="assets/blinkies/pluto.gif" alt="blinkie" />
+              <img src="assets/blinkies/ocaptain.gif" alt="blinkie" />
+              <img src="assets/buttons/nasabutton.png" alt="button" />
+              <img src="assets/buttons/linuxnow.jpg" alt="button" />
+              <img src="assets/buttons/263gggk.gif" alt="button" />
+              <img src="assets/buttons/bestview.gif" alt="button" />
+              <img src="assets/buttons/cpp.png" alt="button" />
+              <img src="assets/buttons/hatemac.jpg" alt="button" />
+              <img src="assets/buttons/internet_now02.gif" alt="button" />
+              <img src="assets/buttons/mtv.png" alt="button" />
+              <img src="assets/buttons/radioshack.png" alt="button" />
+              <img src="assets/buttons/stackoverflow.png" alt="button" />
+              <img
+                src="assets/buttons/tumblr_inline_p0bn6sbzDa1ty2vf6_500.gif" alt="button" />
+              <img
+                src="assets/buttons/tumblr_inline_p3vf6gq4o61rv0j40_500.jpg" alt="button" />
+              <img src="assets/buttons/retrosite.gif" alt="button" />
+              <img src="assets/buttons/wwwbutton.gif" alt="button" />
+              <img src="assets/buttons/colombia.gif" alt="button" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="window">
+        <div class="window-title">CONTACT</div>
+        <div class="content-box">
+          <div class="contact-grid">
+            <a
+              href="https://angysof16.github.io/portfolio-app/"
+              target="_blank"
+              class="contact-btn"
+              >portfolio</a
+            >
+            <a
+              href="https://github.com/angysof16"
+              target="_blank"
+              class="contact-btn"
+              >github</a
+            >
+            <a
+              href="https://instagram.com/angysof16"
+              target="_blank"
+              class="contact-btn"
+              >instagram</a
+            >
+            <a
+              href="https://discord.com/users/698591424605847634"
+              target="_blank"
+              class="contact-btn"
+              >discord</a
+            >
+            <a
+              href="https://linkedin.com/in/angysof16"
+              target="_blank"
+              class="contact-btn"
+              >linkedin</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="window">
-        <div class="footer-content">
-            <p>made by angysof16</p>
-            <p>best viewed on 1024x768 • internet explorer 6.0</p>
-            <div class="footer-images">
-                <img src="assets/blinkies/construction.gif" alt="button">
-                <img src="assets/blinkies/niceday.gif" alt="button">
-                <img src="assets/programmer.gif" alt="button">
-            </div>
+      <div class="footer-content">
+        <p>made by angysof16</p>
+        <p>best viewed on 1024x768 • internet explorer 6.0</p>
+        <div class="footer-images">
+          <img src="assets/blinkies/construction.gif" alt="button" />
+          <img src="assets/blinkies/niceday.gif" alt="button" />
+          <img src="assets/programmer.gif" alt="button" />
         </div>
+      </div>
     </footer>
 
     <!-- Floating elements -->
-    <img src="assets/clipartsus_welcome.gif" alt="floating"
-        class="floating-img floating-1">
-    <img src="assets/construct.gif" width="120" alt="floating" class="floating-img floating-2">
+    <img
+      src="assets/clipartsus_welcome.gif"
+      alt="floating"
+      class="floating-img floating-1"
+    />
+    <img
+      src="assets/construct.gif"
+      width="120"
+      alt="floating"
+      class="floating-img floating-2"
+    />
 
     <!-- Bottom decor flame -->
     <div class="chelsea-flame"></div>
 
-
     <!-- Music Player -->
-    <div id="music-player" class="window"
-        style="position: fixed; bottom: 20px; right: 20px; width: 300px; z-index: 1000; display: none;">
-        <div class="window-title">MUSIC PLAYER</div>
-        <div class="content-box">
-            <div id="now-playing">Now playing: <span id="current-song">-</span></div>
-            <div class="player-controls">
-                <button id="prev-btn">⏮</button>
-                <button id="play-pause-btn">⏸</button>
-                <button id="next-btn">⏭</button>
-                <button id="mute-btn">🔊</button>
-            </div>
-            <div class="volume-control">
-                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
-            </div>
+    <div
+      id="music-player"
+      class="window"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        z-index: 1000;
+        display: none;
+      "
+    >
+      <div class="window-title">MUSIC PLAYER</div>
+      <div class="content-box">
+        <div id="now-playing">
+          Now playing: <span id="current-song">-</span>
         </div>
+        <div class="player-controls">
+          <button id="prev-btn">⏮</button>
+          <button id="play-pause-btn">⏸</button>
+          <button id="next-btn">⏭</button>
+          <button id="mute-btn">🔊</button>
+        </div>
+        <div class="volume-control">
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.5"
+          />
+        </div>
+      </div>
     </div>
 
     <!-- Audio -->
     <audio id="background-music" loop></audio>
     <script src="music-player.js"></script>
-
-
-</body>
-
+  </body>
 </html>
