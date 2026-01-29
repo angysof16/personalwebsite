@@ -196,7 +196,8 @@ section {
 /* ==================== PROJECTS ==================== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
+  grid-template-columns: auto auto auto;
   gap: 20px;
 }
 
@@ -242,6 +243,61 @@ section {
   height: auto;
   display: inline-block;
   vertical-align: middle;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, #5eac56, #3c873c);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #2a6b2a;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 0 #2a6b2a,
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  cursor: pointer;
+  margin-top: 15px;
+  width: fit-content;
+  min-width: 160px;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 0 #2a6b2a,
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, #6dbc64, #4a9a4a);
+}
+
+.project-btn:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 0 #2a6b2a,
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-item > *:last-child {
+  margin-top: auto;
+}
+
+.project-item p {
+  flex-grow: 1;
 }
 
 /* ==================== VINYL GALLERY ==================== */
