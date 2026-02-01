@@ -60,6 +60,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Mostrar el reproductor al cargar la página
     musicPlayer.style.display = 'block';
 
+    // Agregar funcionalidad al botón de cerrar (X)
+    const windowTitle = musicPlayer.querySelector('.window-title');
+    
+    // Crear un botón de cerrar clickeable
+    windowTitle.style.cursor = 'default';
+    windowTitle.addEventListener('click', function(e) {
+        // Verificar si el clic fue cerca del lado derecho (donde está la X)
+        const rect = windowTitle.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const titleWidth = rect.width;
+        
+        // Si el clic está en los últimos 35px (donde está la X)
+        if (clickX > titleWidth - 35) {
+            musicPlayer.style.display = 'none';
+            // Pausar la música al cerrar
+            if (!audio.paused) {
+                audio.pause();
+                playPauseBtn.textContent = '▶';
+            }
+        }
+    });
+
     function loadCurrentSong() {
         audio.src = songs[currentSongIndex].url;
     }
