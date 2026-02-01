@@ -1,0 +1,44 @@
+/* ==================== DECORATIVE BARS ==================== */
+.planets-bar {
+  background: url("../assets/planets.webp") repeat-x;
+  background-size: auto 24px;
+  width: 200%;
+  height: 24px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.chelsea-flame {
+  background: url("../assets/chelsea_flame.gif") repeat-x;
+  background-size: auto 24px;
+  width: 200%;
+  height: 24px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ==================== FLOATING DECORATIONS ==================== */
+.floating-img {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+  filter: brightness(0.8);
+}
+
+.floating-1 {
+  top: 150px;
+  right: 50px;
+  width: 120px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-2 {
+  bottom: 100px;
+  left: 50px;
+  width: 100px;
+  animation: float 5s ease-in-out infinite 1s;
+}

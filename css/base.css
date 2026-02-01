@@ -1,0 +1,44 @@
+/* ==================== FONTS ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap");
+
+/* ==================== RESET & BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000 url("../assets/space.jpg") fixed;
+  background-size: cover;
+  font-family: "Courier Prime", monospace;
+  color: #00ff00;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==================== SCANLINE EFFECT ==================== */
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 255, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 100% 4px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}

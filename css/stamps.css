@@ -1,0 +1,28 @@
+/* ==================== STAMPS ==================== */
+.stamps-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: #000000;
+  border: 3px dashed #00ff00;
+}
+
+.stamps-section h3 {
+  color: #00ff00;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.stamps-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.stamps-grid img {
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}

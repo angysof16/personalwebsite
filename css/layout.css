@@ -1,0 +1,41 @@
+/* ==================== MAIN LAYOUT ==================== */
+main {
+  padding: 0 20px 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dcdedf;
+  border: 2px groove #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bec7c9;
+  border: 2px outset #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5bdbf;
+}

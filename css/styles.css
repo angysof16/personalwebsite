@@ -1,0 +1,30 @@
+/* 
+  PORTAFOLIO RETRO - ESTRUCTURA MODULAR CSS
+  ==========================================
+  Este archivo importa todos los componentes CSS de forma organizada
+*/
+
+/* Base y configuración general */
+@import 'base.css';
+
+/* Componentes estructurales */
+@import 'windows.css';
+@import 'layout.css';
+@import 'navigation.css';
+
+/* Componentes decorativos */
+@import 'decorations.css';
+
+/* Secciones de contenido */
+@import 'profile.css';
+@import 'experience.css';
+@import 'projects.css';
+@import 'vinyl-gallery.css';
+@import 'stamps.css';
+
+/* Funcionalidades */
+@import 'music-player.css';
+@import 'contact-footer.css';
+
+/* Responsive (debe ir al final) */
+@import 'responsive.css';
