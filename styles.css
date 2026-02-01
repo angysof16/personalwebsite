@@ -662,8 +662,13 @@ footer {
   gap: 10px;
 }
 
+.volume-icon {
+  font-size: 16px;
+  user-select: none;
+}
+
 #volume-slider {
-  width: 100%;
+  flex: 1;
   height: 6px;
   background: #d4d0c8;
   border: 1px inset #808080;
