@@ -193,11 +193,129 @@ section {
   border: 2px groove #808080;
 }
 
+/* ==================== EXPERIENCE ==================== */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #0000aa, #1084d0);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #e7e4cf;
+  border: 2px outset #808080;
+}
+
+.experience-item::before {
+  content: "●";
+  position: absolute;
+  left: -26px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  color: #0000aa;
+  font-size: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-item h3 {
+  font-family: "VT323", monospace;
+  font-size: 22px;
+  color: #0000aa;
+  margin: 0;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.experience-date {
+  background: linear-gradient(180deg, #366ef3, #2d69f4 86%, #1a3eb4);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #003c74;
+  white-space: nowrap;
+}
+
+.experience-company {
+  font-family: "Courier Prime", monospace;
+  font-size: 16px;
+  color: #000000;
+  margin: 5px 0 15px 0;
+  font-weight: bold;
+}
+
+.experience-description {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  padding-left: 20px;
+  margin-bottom: 8px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-description li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #0000aa;
+  font-weight: bold;
+}
+
+/* ==================== PROJECTS ==================== */
+.timeline {
+  padding-left: 20px;
+}
+
+.timeline::before {
+  left: 4px;
+}
+
+.experience-item::before {
+  left: -18px;
+}
+
+.experience-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-date {
+  align-self: flex-start;
+}
+
 /* ==================== PROJECTS ==================== */
 .project-grid {
   display: grid;
   /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -261,7 +379,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 
+  box-shadow:
     0 4px 0 #2a6b2a,
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
@@ -273,7 +391,7 @@ section {
 
 .project-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 6px 0 #2a6b2a,
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   background: linear-gradient(180deg, #6dbc64, #4a9a4a);
@@ -281,7 +399,7 @@ section {
 
 .project-btn:active {
   transform: translateY(1px);
-  box-shadow: 
+  box-shadow:
     0 2px 0 #2a6b2a,
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
@@ -300,6 +418,32 @@ section {
   flex-grow: 1;
 }
 
+.project-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.project-tags {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #5698ac, #413c87);
+  color: #ffffff;
+  padding: 4px 8px;
+  border: 2px solid #2b2a6b;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
 /* ==================== VINYL GALLERY ==================== */
 #vinyl-gallery {
   width: 100%;
@@ -316,7 +460,9 @@ section {
 .vinyl {
   perspective: 500px;
   width: 18px;
-  transition: width 0.5s, margin-right 0.5s;
+  transition:
+    width 0.5s,
+    margin-right 0.5s;
   margin-right: 20px;
   position: relative;
   display: flex;
@@ -330,7 +476,11 @@ section {
 }
 
 .vinyl img {
-  transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+  transition:
+    transform 0.5s,
+    width 0.5s,
+    height 0.5s,
+    margin-top 0.5s;
   width: 180px;
   height: 180px;
   transform: rotateX(0deg) rotateY(25deg);
@@ -502,6 +652,40 @@ footer {
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .experience-item::before {
+    left: -18px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-date {
+    align-self: flex-start;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-item {
+    padding: 15px;
+  }
+
+  .project-item img {
+    height: 200px;
+  }
+
   .profile-container {
     flex-direction: column;
     align-items: center;

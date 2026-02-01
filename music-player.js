@@ -56,25 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     let currentSongIndex = 0;
-    let userInteracted = false;
 
-    function startMusic() {
-        if (!userInteracted) {
-            userInteracted = true;
-            loadCurrentSong();
-            audio.volume = volumeSlider.value;
-
-            audio.play().then(() => {
-                console.log("Música iniciada automáticamente");
-                musicPlayer.style.display = 'block';
-            }).catch(e => {
-                console.log("Error al reproducir automáticamente:", e);
-                musicPlayer.style.display = 'block';
-            });
-
-            updateCurrentSong();
-        }
-    }
+    // Mostrar el reproductor al cargar la página
+    musicPlayer.style.display = 'block';
 
     function loadCurrentSong() {
         audio.src = songs[currentSongIndex].url;
@@ -84,10 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
         currentSongElement.textContent = songs[currentSongIndex].title;
     }
 
-    const interactionEvents = ['click', 'scroll', 'keydown', 'touchstart'];
-    interactionEvents.forEach(event => {
-        document.addEventListener(event, startMusic, { once: true });
-    });
+    // Cargar la primera canción y actualizar el título
+    loadCurrentSong();
+    updateCurrentSong();
+
+    // Establecer el volumen inicial
+    audio.volume = volumeSlider.value;
 
     playPauseBtn.addEventListener('click', function () {
         if (audio.paused) {
@@ -124,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         audio.volume = volumeSlider.value;
     });
 
-    // Termina La canción, pasar a la siguiente
+    // Termina la canción, pasar a la siguiente
     audio.addEventListener('ended', function () {
         currentSongIndex = (currentSongIndex + 1) % songs.length;
         loadCurrentSong();
@@ -138,6 +124,4 @@ document.addEventListener('DOMContentLoaded', function () {
             nextBtn.click();
         }, 1000);
     });
-
-    loadCurrentSong();
 });
