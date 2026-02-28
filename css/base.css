@@ -1,0 +1,87 @@
+/* ==================== FONTS ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap");
+
+/* ==================== GLOBAL RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== BODY & BACKGROUND ==================== */
+body {
+  background: #000000 url("../assets/space.jpg") fixed;
+  background-size: cover;
+  font-family: "Courier Prime", monospace;
+  color: #00ff00;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==================== SCANLINE EFFECT ==================== */
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 255, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 100% 4px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* ==================== DECORATIVE BARS ==================== */
+.planets-bar {
+  background: url("../assets/planets.webp") repeat-x;
+  background-size: auto 24px;
+  width: 200%;
+  height: 24px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.chelsea-flame {
+  background: url("../assets/chelsea_flame.gif") repeat-x;
+  background-size: auto 24px;
+  width: 200%;
+  height: 24px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dcdedf;
+  border: 2px groove #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bec7c9;
+  border: 2px outset #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5bdbf;
+}

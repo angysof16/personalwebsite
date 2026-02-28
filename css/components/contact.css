@@ -1,0 +1,24 @@
+/* ==================== CONTACT ==================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.contact-btn {
+  background: linear-gradient(180deg, #5eac56, #3c873c);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px;
+  border: 2px outset #ffffff;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contact-btn:hover {
+  background: linear-gradient(180deg, #3c873c, #5eac56);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.7);
+}

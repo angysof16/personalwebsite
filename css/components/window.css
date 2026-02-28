@@ -1,0 +1,39 @@
+/* ==================== WINDOWS XP/98 STYLE ==================== */
+.window {
+  background: #c0c0c0;
+  border: 2px outset #ffffff;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.window-title {
+  background: linear-gradient(to right, #0000aa, #1084d0);
+  color: #ffffff;
+  padding: 5px 10px;
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #000000;
+  border-bottom: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-title::after {
+  content: "X";
+  background: linear-gradient(180deg, #e99d7e 0%, #df5941 29%, #9c200f 100%);
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.content-box {
+  background: #ffffff;
+  padding: 20px;
+  color: #000000;
+  border: 2px inset #808080;
+}

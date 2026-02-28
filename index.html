@@ -4,392 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>angysof16</title>
-    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/window.css" />
+    <link rel="stylesheet" href="css/components/navigation.css" />
+    <link rel="stylesheet" href="css/components/profile.css" />
+    <link rel="stylesheet" href="css/components/experience.css" />
+    <link rel="stylesheet" href="css/components/projects.css" />
+    <link rel="stylesheet" href="css/components/vinyl-gallery.css" />
+    <link rel="stylesheet" href="css/components/stamps.css" />
+    <link rel="stylesheet" href="css/components/contact.css" />
+    <link rel="stylesheet" href="css/components/music-player.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    
     <link rel="icon" href="assets/logo.png" />
   </head>
 
   <body>
     <div class="planets-bar"></div>
 
-    <!-- Nav -->
-    <nav class="window">
-      <div class="window-title">MY PORTFOLIO :D</div>
-      <div class="nav-content">
-        <a href="#about">about me</a>
-        <a href="#projects">projects</a>
-        <a href="#music">music</a>
-        <a href="#contact">contact</a>
-      </div>
-    </nav>
+    <!-- Navigation Component -->
+    <div id="nav-component"></div>
 
-    <!-- Main -->
     <main>
-      <!-- About -->
-      <section id="about" class="window">
-        <div class="window-title">ABOUT ME</div>
-        <div class="content-box">
-          <div class="profile-container">
-            <img src="assets/pfp.jpg" alt="profile pic" class="profile-pic" />
-            <div class="profile-text">
-              <h2>angysof16</h2>
-              <h3>Sofia Guerra</h3>
-              <p>Age: 20</p>
-              <p>Location: Bogotá, Colombia</p>
-              <p>Interests: Robotics, coding, music, space</p>
-              <p class="bio">Systems + mechatronics engineering student :p</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- About Component -->
+      <div id="about-component"></div>
 
-      <!-- Experience -->
-      <section id="experience" class="window">
-        <div class="window-title">EXPERIENCE</div>
-        <div class="content-box">
-          <div class="timeline">
-            <div class="experience-item">
-              <div class="experience-header">
-                <h3>Teaching Assistant – Networks and Telecommunications</h3>
-                <span class="experience-date">2026 - Present</span>
-              </div>
-              <h4 class="experience-company">
-                Pontificia Universidad Javeriana
-              </h4>
-              <ul class="experience-description">
-                <li>
-                  Provided academic support to undergraduate students in
-                  networking and telecommunications concepts and projects
-                </li>
-                <li>
-                  Assisted in troubleshooting network configuration and protocol
-                  analysis
-                </li>
-                <li>
-                  Guided students in the use of networking tools and
-                  technologies such as routing, switching, and network
-                  simulation with tools like GNS3 and Cisco Packet Tracer
-                </li>
-              </ul>
-            </div>
+      <!-- Experience Component -->
+      <div id="experience-component"></div>
 
-            <div class="experience-item">
-              <div class="experience-header">
-                <h3>Secretary</h3>
-                <span class="experience-date">2026 - Present</span>
-              </div>
-              <h4 class="experience-company">
-                IEEE Robotics and Automation Society Javeriana Student Chapter
-              </h4>
-              <ul class="experience-description">
-                <li>
-                  Managed and organized meetings, official documents, and
-                  internal records of the chapter
-                </li>
-                <li>
-                  Coordinated meetings, followed up on action items, and
-                  facilitated communication among board members and general
-                  members
-                </li>
-                <li>
-                  Supported the planning and execution of academic events,
-                  workshops, and chapter activities
-                </li>
-                <li>
-                  Handled formal communications, reports, and documentation for
-                  IEEE at institutional levels
-                </li>
-              </ul>
-            </div>
+      <!-- Projects Component -->
+      <div id="projects-component"></div>
 
-            <div class="experience-item">
-              <div class="experience-header">
-                <h3>Customer Service Representative</h3>
-                <span class="experience-date">2023 - 2024</span>
-              </div>
-              <h4 class="experience-company">Teleperformance</h4>
-              <ul class="experience-description">
-                <li>Provided email and phone support for Stripe in English.</li>
-                <li>
-                  Assisted customers with payment processing inquiries, meeting performance metrics.
-                </li>
-                <li>
-                  Ensured high customer satisfaction through problem-solving and personalized support.
-                </li>
-                <li>
-                  Troubleshot technical issues and guided users through
-                  resolutions
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Music Component -->
+      <div id="music-component"></div>
 
-      <!-- Projects -->
-      <section id="projects" class="window">
-        <div class="window-title">PROJECTS</div>
-        <div class="content-box">
-          <div class="project-grid">
-            <div class="project-item">
-              <img src="assets/image.png" alt="project 1" />
-              <h3>Professional portfolio</h3>
-              <div class="text-with-icon">
-                <p>
-                  Personal professional website built with React that showcases
-                  my projects, skills, and experience
-                </p>
-              </div>
-              <div class="project-tags-container">
-                <span class="project-tags">React</span>
-                <span class="project-tags">JavaScript</span>
-                <span class="project-tags">CSS</span>
-              </div>
-              <div>
-                <a
-                  class="project-btn"
-                  href="https://angysof16.github.io/portfolio-app/"
-                  target="_blank"
-                  >Visit Website!
-                </a>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <img src="assets/rby.png" alt="project 2" />
-              <h3>RB-Y1 Robot Implementation</h3>
-              <div class="text-with-icon">
-                <p>
-                  ROS2 Jazzy implementation of the Rainbow Robotics RB-Y1 robot
-                  with Gazebo simulation and control.
-                </p>
-              </div>
-              <div class="project-tags-container">
-                <span class="project-tags">ROS2</span>
-                <span class="project-tags">RViz2</span>
-                <span class="project-tags">Gazebo</span>
-              </div>
-              <div>
-                <a
-                  class="project-btn"
-                  href="https://github.com/angysof16/rby1_robot_implementation"
-                  target="_blank"
-                  >Visit Repository!
-                </a>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <img src="assets/xaeweb.png" alt="project 4" />
-              <h3>XAE Website</h3>
-              <p>
-                Website for the Aerospace Engineering student research group
-                Xavierian Aerospace Engineering.
-              </p>
-              <div class="project-tags-container">
-                <span class="project-tags">Angular</span>
-                <span class="project-tags">TypeScript</span>
-                <span class="project-tags">SCSS</span>
-              </div>
-              <div>
-                <a
-                  class="project-btn"
-                  href="https://xavierianaerospace.github.io/"
-                  target="_blank"
-                  >Visit Website!
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Music -->
-      <section id="music" class="window">
-        <div class="window-title">MUSIC & MISC</div>
-        <div class="content-box">
-          <div id="vinyl-gallery">
-            <div class="vinyl">
-              <img src="assets/covers/mtvunplugged.jpg" />
-            </div>
-            <div class="title">Unplugged - Alice in Chains</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/myownprison.jpg" />
-            </div>
-            <div class="title">Creed - My Own Prison</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/breakthecycle.jpg" />
-            </div>
-            <div class="title">Staind - Break the Cycle</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/superunknown.jpg" />
-            </div>
-            <div class="title">Superunknown - Soundgarden</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/above.jpeg" />
-            </div>
-            <div class="title">Above - Mad Season</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/bullets.webp" />
-            </div>
-            <div class="title">
-              I Brought You My Bullets, You Brought Me Your Love - My Chemical
-              Romance
-            </div>
-
-            <div class="vinyl">
-              <img src="assets/covers/breakfastinamerica.webp" />
-            </div>
-            <div class="title">Breakfast in America - Supertramp</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/1984.jpg" />
-            </div>
-            <div class="title">1984 - Van Halen</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/tailwinds.webp" />
-            </div>
-            <div class="title">Tailwinds - The Fearless Flyers</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/jarofflies.jpg" />
-            </div>
-            <div class="title">Jar of Flies - Alice in Chains</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/ten.jpg" />
-            </div>
-            <div class="title">Ten - Pearl Jam</div>
-
-            <div class="vinyl">
-              <img src="assets/covers/fantasticplanet.jpg" />
-            </div>
-            <div class="title">Failure - Fantastic Planet</div>
-          </div>
-
-          <small>
-            Vinyl gallery inspired by
-            <a
-              href="https://www.kazimariusz.com/codesnippets/vinyl-showcase"
-              target="_blank"
-              >kazimariusz's vinyl showcase</a
-            >
-          </small>
-
-          <!-- BLINKIES -->
-          <div class="stamps-section">
-            <div class="stamps-grid">
-              <img src="assets/blinkies/bassguitarist.gif" alt="blinkie" />
-              <img src="assets/blinkies/aliceinchains.gif" alt="blinkie" />
-              <img
-                src="assets/blinkies/0210-werewolfmoonhowl.gif"
-                width="150"
-                alt="blinkie"
-              />
-              <img
-                src="assets/blinkies/0092-computerconnect.gif"
-                alt="blinkie"
-              />
-              <img src="assets/blinkies/apollo.gif" alt="blinkie" />
-              <img src="assets/blinkies/htmlblinkie.gif" alt="blinkie" />
-              <img src="assets/blinkies/0028-computer.gif" alt="blinkie" />
-              <img src="assets/blinkies/primus.gif" alt="blinkie" />
-              <img src="assets/blinkies/cblinkie.gif" alt="blinkie" />
-              <img src="assets/blinkies/rocketplanes.gif" alt="blinkie" />
-              <img src="assets/blinkies/scienceiscool.gif" alt="blinkie" />
-              <img src="assets/blinkies/digjazz.gif" alt="blinkie" />
-              <img src="assets/blinkies/jediknight.gif" alt="blinkie" />
-              <img src="assets/blinkies/pluto.gif" alt="blinkie" />
-              <img src="assets/blinkies/ocaptain.gif" alt="blinkie" />
-              <img src="assets/buttons/nasabutton.png" alt="button" />
-              <img src="assets/buttons/linuxnow.jpg" alt="button" />
-              <img src="assets/buttons/263gggk.gif" alt="button" />
-              <img src="assets/buttons/bestview.gif" alt="button" />
-              <img src="assets/buttons/cpp.png" alt="button" />
-              <img src="assets/buttons/hatemac.jpg" alt="button" />
-              <img src="assets/buttons/internet_now02.gif" alt="button" />
-              <img src="assets/buttons/mtv.png" alt="button" />
-              <img src="assets/buttons/radioshack.png" alt="button" />
-              <img src="assets/buttons/stackoverflow.png" alt="button" />
-              <img
-                src="assets/buttons/tumblr_inline_p0bn6sbzDa1ty2vf6_500.gif"
-                alt="button"
-              />
-              <img
-                src="assets/buttons/tumblr_inline_p3vf6gq4o61rv0j40_500.jpg"
-                alt="button"
-              />
-              <img src="assets/buttons/retrosite.gif" alt="button" />
-              <img src="assets/buttons/wwwbutton.gif" alt="button" />
-              <img src="assets/buttons/colombia.gif" alt="button" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="window">
-        <div class="window-title">CONTACT</div>
-        <div class="content-box">
-          <div class="contact-grid">
-            <a
-              href="https://angysof16.github.io/portfolio-app/"
-              target="_blank"
-              class="contact-btn"
-              >portfolio</a
-            >
-            <a
-              href="https://github.com/angysof16"
-              target="_blank"
-              class="contact-btn"
-              >github</a
-            >
-            <a
-              href="https://instagram.com/angysof16"
-              target="_blank"
-              class="contact-btn"
-              >instagram</a
-            >
-            <a
-              href="https://discord.com/users/698591424605847634"
-              target="_blank"
-              class="contact-btn"
-              >discord</a
-            >
-            <a
-              href="https://linkedin.com/in/angysof16"
-              target="_blank"
-              class="contact-btn"
-              >linkedin</a
-            >
-          </div>
-        </div>
-      </section>
+      <!-- Contact Component -->
+      <div id="contact-component"></div>
     </main>
 
-    <!-- Footer -->
-    <footer class="window">
-      <div class="footer-content">
-        <p>made by angysof16</p>
-        <p>best viewed on 1024x768 • internet explorer 6.0</p>
-        <p>
-          Vinyl gallery inspired by
-          <a href="https://www.kazimariusz.com/codesnippets/vinyl-showcase"
-            >kazimariusz's vinyl showcase</a
-          >
-        </p>
-        <div class="footer-images">
-          <img src="assets/blinkies/construction.gif" alt="button" />
-          <img src="assets/blinkies/niceday.gif" alt="button" />
-          <img src="assets/programmer.gif" alt="button" />
-        </div>
-      </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
     <!-- Floating elements -->
     <img
@@ -407,47 +65,14 @@
     <!-- Bottom decor flame -->
     <div class="chelsea-flame"></div>
 
-    <!-- Music Player -->
-    <div
-      id="music-player"
-      class="window"
-      style="
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 300px;
-        z-index: 1000;
-        display: none;
-      "
-    >
-      <div class="window-title">MUSIC PLAYER</div>
-      <div class="content-box">
-        <div id="now-playing">
-          Now playing: <span id="current-song">-</span>
-        </div>
-        <div class="player-controls">
-          <button id="prev-btn">⏮</button>
-          <button id="play-pause-btn">▶</button>
-          <button id="next-btn">⏭</button>
-          <button id="mute-btn">🔊</button>
-        </div>
-        <div class="volume-control">
-          <span class="volume-icon">🔈</span>
-          <input
-            type="range"
-            id="volume-slider"
-            min="0"
-            max="1"
-            step="0.1"
-            value="0.5"
-          />
-          <span class="volume-icon">🔊</span>
-        </div>
-      </div>
-    </div>
+    <!-- Music Player Component -->
+    <div id="music-player-component"></div>
 
     <!-- Audio -->
     <audio id="background-music"></audio>
+    
+    <!-- Scripts -->
+    <script src="js/components-loader.js"></script>
     <script src="music-player.js"></script>
   </body>
 </html>

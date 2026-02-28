@@ -1,0 +1,39 @@
+/* ==================== MAIN CONTENT ==================== */
+main {
+  padding: 0 20px 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* ==================== FLOATING DECORATIONS ==================== */
+.floating-img {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+  filter: brightness(0.8);
+}
+
+.floating-1 {
+  top: 150px;
+  right: 50px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-2 {
+  bottom: 100px;
+  left: 50px;
+  animation: float 5s ease-in-out infinite 1s;
+}

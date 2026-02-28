@@ -1,0 +1,81 @@
+/* ==================== VINYL GALLERY ==================== */
+#vinyl-gallery {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 6px;
+  overflow-x: auto;
+  gap: 15px;
+  background: #000000;
+}
+
+.vinyl {
+  perspective: 500px;
+  width: 18px;
+  transition:
+    width 0.5s,
+    margin-right 0.5s;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.vinyl:hover {
+  width: 148px;
+  margin-right: 25px;
+}
+
+.vinyl img {
+  transition:
+    transform 0.5s,
+    width 0.5s,
+    height 0.5s,
+    margin-top 0.5s;
+  width: 180px;
+  height: 180px;
+  transform: rotateX(0deg) rotateY(25deg);
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  border: 3px solid #333333;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  object-fit: cover;
+}
+
+.vinyl:hover img {
+  transform: rotateX(0deg) rotateY(10deg);
+  width: 188px;
+  height: 188px;
+  margin-top: -2px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.title {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  padding-left: 6px;
+  color: #00ff00;
+  font-size: 12px;
+  text-shadow: 0 0 5px #00ff00;
+  z-index: 10;
+}
+
+.vinyl:nth-child(n):hover + .title {
+  visibility: visible;
+}

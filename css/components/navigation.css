@@ -1,0 +1,30 @@
+/* ==================== NAVIGATION ==================== */
+nav {
+  margin: 40px auto 20px;
+  max-width: 900px;
+}
+
+.nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  background: #cfccc2;
+  justify-content: center;
+}
+
+.nav-content a {
+  background: linear-gradient(180deg, #366ef3, #2d69f4 86%, #1a3eb4);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.nav-content a:hover {
+  background: linear-gradient(180deg, #1c35b4, #2450d7 86%, #1a3eb4);
+  transform: translateY(-2px);
+}

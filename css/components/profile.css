@@ -1,0 +1,33 @@
+/* ==================== PROFILE ==================== */
+.profile-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.profile-text h2 {
+  font-family: "VT323", monospace;
+  font-size: 28px;
+  color: #0000aa;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.bio {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e7e4cf;
+  border: 2px groove #808080;
+}
