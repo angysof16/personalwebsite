@@ -1,0 +1,95 @@
+/* ==================== EXPERIENCE ==================== */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #0000aa, #1084d0);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #e7e4cf;
+  border: 2px outset #808080;
+}
+
+.experience-item::before {
+  content: "●";
+  position: absolute;
+  left: -26px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  color: #0000aa;
+  font-size: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-item h3 {
+  font-family: "VT323", monospace;
+  font-size: 22px;
+  color: #0000aa;
+  margin: 0;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.experience-date {
+  background: linear-gradient(180deg, #366ef3, #2d69f4 86%, #1a3eb4);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #003c74;
+  white-space: nowrap;
+}
+
+.experience-company {
+  font-family: "Courier Prime", monospace;
+  font-size: 16px;
+  color: #000000;
+  margin: 5px 0 15px 0;
+  font-weight: bold;
+}
+
+.experience-description {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience-description li {
+  padding-left: 20px;
+  margin-bottom: 8px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-description li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #0000aa;
+  font-weight: bold;
+}
